@@ -574,3 +574,80 @@ span,
     background: #8B5CF6;
     color: #ffffff;
 }
+
+/* ===== Cyan + Purple Final Theme ===== */
+
+body {
+    background-color: #0B1120;
+    color: #F8FAFC;
+}
+
+/* Navbar */
+.logo span,
+.navbar a:hover,
+.navbar a.active {
+    color: #00E5FF;
+}
+
+/* Headings */
+.heading span,
+.home-content .text-animate span {
+    color: #8B5CF6;
+}
+
+/* Cards */
+.portfolio-box,
+.grid-card,
+.about-content {
+    background: #172033;
+    border: 1px solid #263653;
+}
+
+/* Icons */
+.grid-card i,
+.social-media a {
+    color: #00E5FF;
+    border-color: #00E5FF;
+}
+
+/* Main Buttons */
+.btn {
+    background: #8B5CF6;
+    border-color: #8B5CF6;
+    color: #ffffff;
+}
+
+/* Second Buttons */
+.btn.secondary {
+    background: transparent;
+    border-color: #00E5FF;
+    color: #00E5FF;
+}
+
+/* Button Hover */
+.btn:hover {
+    background: #00E5FF;
+    border-color: #00E5FF;
+    color: #0B1120;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.5);
+}
+
+.btn.secondary:hover {
+    background: #8B5CF6;
+    border-color: #8B5CF6;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(139, 92, 246, 0.5);
+}
+
+/* Project Tags */
+.tags span {
+    background: rgba(139, 92, 246, 0.15);
+    color: #A78BFA;
+}
+
+/* Project hover */
+.portfolio-box:hover,
+.grid-card:hover {
+    border-color: #8B5CF6;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+}
