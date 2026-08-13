@@ -1793,3 +1793,8 @@ footer {
     display: none !important;
     content: none !important;
 }
+
+.home::before {
+    display: none !important;
+    content: none !important;
+}
