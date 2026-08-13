@@ -540,3 +540,36 @@
       .home-content h3 { font-size: 2rem; }
       .contact form .input-box input { width: 100%; }
     }
+
+    /* ===== New Portfolio Color Theme ===== */
+
+body {
+    background: #0B1120;
+    color: #F8FAFC;
+}
+
+section {
+    background: #111827;
+}
+
+.portfolio-box,
+.grid-card {
+    background: #172033;
+    border: 1px solid #233047;
+}
+
+span,
+.navbar a:hover,
+.navbar a.active {
+    color: #00E5FF;
+}
+
+.btn {
+    background: #00E5FF;
+    color: #0B1120;
+}
+
+.btn:hover {
+    background: #8B5CF6;
+    color: #ffffff;
+}
