@@ -1249,3 +1249,545 @@ footer {
         padding: 1.5rem;
     }
 }
+
+/* =====================================================
+   FINAL FULL COLOR CHANGE
+   Midnight Blue + Royal Blue + Aqua
+   ===================================================== */
+
+:root {
+    --bg-main: #07111F;
+    --bg-secondary: #0D1B2A;
+    --card-bg: #10243A;
+
+    --text-main: #F8FAFC;
+    --text-muted: #A9B7C9;
+
+    --primary: #3B82F6;
+    --secondary: #38BDF8;
+    --accent: #22D3EE;
+
+    --border-color: rgba(56, 189, 248, 0.22);
+}
+
+
+/* ================= BODY ================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(59, 130, 246, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(34, 211, 238, 0.08),
+            transparent 35%
+        ),
+        #07111F !important;
+
+    color: #F8FAFC !important;
+
+    background-image: none !important;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    background: transparent !important;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.header,
+header {
+    background: rgba(7, 17, 31, 0.94) !important;
+
+    border-bottom:
+        1px solid rgba(56, 189, 248, 0.14) !important;
+
+    box-shadow:
+        0 6px 25px rgba(0, 0, 0, 0.20);
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    color: #F8FAFC !important;
+}
+
+.logo span {
+    color: #38BDF8 !important;
+}
+
+
+/* ================= NAV LINKS ================= */
+
+.navbar a {
+    color: #E5EDF7 !important;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #38BDF8 !important;
+}
+
+
+/* ================= HERO TEXT ================= */
+
+.home-content h1 {
+    color: #F8FAFC !important;
+
+    -webkit-text-fill-color: #F8FAFC !important;
+}
+
+
+/* Developer Text */
+
+.home-content .text-animate span {
+    background:
+        linear-gradient(
+            90deg,
+            #38BDF8,
+            #3B82F6
+        ) !important;
+
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+
+    -webkit-text-fill-color: transparent !important;
+
+    color: transparent !important;
+
+    text-shadow: none !important;
+}
+
+
+/* Paragraph */
+
+.home-content p {
+    color: #A9B7C9 !important;
+}
+
+
+/* ================= HEADINGS ================= */
+
+.heading {
+    color: #F8FAFC !important;
+}
+
+.heading span {
+    color: #38BDF8 !important;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-media a {
+    color: #38BDF8 !important;
+
+    border-color: #38BDF8 !important;
+
+    background:
+        rgba(56, 189, 248, 0.03) !important;
+}
+
+.social-media a:hover {
+    color: #FFFFFF !important;
+
+    border-color: #3B82F6 !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #38BDF8,
+            #3B82F6
+        ) !important;
+
+    box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.45) !important;
+}
+
+
+/* ================= MAIN BUTTON ================= */
+
+.btn {
+    background:
+        linear-gradient(
+            90deg,
+            #38BDF8,
+            #3B82F6
+        ) !important;
+
+    color: #FFFFFF !important;
+
+    border:
+        2px solid transparent !important;
+
+    box-shadow:
+        0 0 16px rgba(59, 130, 246, 0.24) !important;
+}
+
+.btn:hover {
+    background:
+        linear-gradient(
+            90deg,
+            #3B82F6,
+            #2563EB
+        ) !important;
+
+    color: #FFFFFF !important;
+
+    box-shadow:
+        0 0 20px rgba(59, 130, 246, 0.45),
+        0 0 35px rgba(56, 189, 248, 0.18) !important;
+}
+
+
+/* ================= SECONDARY BUTTON ================= */
+
+.btn.secondary {
+    background: transparent !important;
+
+    color: #38BDF8 !important;
+
+    border:
+        2px solid #38BDF8 !important;
+
+    box-shadow: none !important;
+}
+
+.btn.secondary:hover {
+    background: #3B82F6 !important;
+
+    border-color: #3B82F6 !important;
+
+    color: #FFFFFF !important;
+
+    box-shadow:
+        0 0 20px rgba(59, 130, 246, 0.40) !important;
+}
+
+
+/* ================= PROFILE HEXAGON ================= */
+
+.hexagon-wrapper {
+    background:
+        linear-gradient(
+            135deg,
+            #38BDF8,
+            #3B82F6
+        ) !important;
+
+    filter:
+        drop-shadow(
+            0 0 15px rgba(56, 189, 248, 0.30)
+        ) !important;
+}
+
+.hexagon-inner {
+    background: #07111F !important;
+}
+
+
+/* ================= ABOUT CARD ================= */
+
+.about-content {
+    background:
+        linear-gradient(
+            145deg,
+            #10243A,
+            #0D1B2A
+        ) !important;
+
+    border:
+        1px solid rgba(56, 189, 248, 0.20) !important;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25) !important;
+}
+
+.about-text h3 {
+    color: #38BDF8 !important;
+}
+
+.about-text p {
+    color: #A9B7C9 !important;
+}
+
+
+/* ================= EDUCATION ================= */
+
+.education-box {
+    border-left:
+        3px solid #3B82F6 !important;
+}
+
+.education-box h4 {
+    color: #F8FAFC !important;
+}
+
+.education-box span {
+    color: #38BDF8 !important;
+}
+
+.education-box p {
+    color: #A9B7C9 !important;
+}
+
+
+/* ================= SKILL / SERVICE CARDS ================= */
+
+.grid-card {
+    background:
+        linear-gradient(
+            145deg,
+            #10243A,
+            #0D1B2A
+        ) !important;
+
+    border:
+        1px solid rgba(56, 189, 248, 0.18) !important;
+}
+
+.grid-card:hover {
+    border-color: #3B82F6 !important;
+
+    box-shadow:
+        0 0 20px rgba(59, 130, 246, 0.20) !important;
+}
+
+.grid-card i {
+    color: #38BDF8 !important;
+}
+
+.grid-card:hover i {
+    color: #3B82F6 !important;
+}
+
+.grid-card h3 {
+    color: #F8FAFC !important;
+}
+
+.grid-card p {
+    color: #A9B7C9 !important;
+}
+
+
+/* ================= SKILL LIST ================= */
+
+.skill-list li {
+    color: #A9B7C9 !important;
+}
+
+.skill-list li::before {
+    color: #38BDF8 !important;
+}
+
+
+/* ================= PROJECT CARDS ================= */
+
+.portfolio-box {
+    background:
+        linear-gradient(
+            145deg,
+            #10243A,
+            #0D1B2A
+        ) !important;
+
+    border:
+        1px solid rgba(56, 189, 248, 0.18) !important;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.22) !important;
+}
+
+.portfolio-box:hover {
+    border-color: #3B82F6 !important;
+
+    box-shadow:
+        0 0 22px rgba(59, 130, 246, 0.22) !important;
+}
+
+.portfolio-content h4 {
+    color: #F8FAFC !important;
+}
+
+.portfolio-content p {
+    color: #A9B7C9 !important;
+}
+
+.portfolio-content strong {
+    color: #38BDF8 !important;
+}
+
+
+/* ================= PROJECT TAGS ================= */
+
+.tags span {
+    background:
+        rgba(59, 130, 246, 0.13) !important;
+
+    color: #7DD3FC !important;
+
+    border:
+        1px solid rgba(56, 189, 248, 0.24) !important;
+}
+
+.tags span:hover {
+    background: #3B82F6 !important;
+
+    color: #FFFFFF !important;
+
+    border-color: #3B82F6 !important;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: transparent !important;
+}
+
+.contact form input,
+.contact form textarea {
+    background:
+        #0D1B2A !important;
+
+    color:
+        #F8FAFC !important;
+
+    border:
+        1px solid rgba(56, 189, 248, 0.16) !important;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    background:
+        #10243A !important;
+
+    border-color:
+        #38BDF8 !important;
+
+    box-shadow:
+        0 0 15px rgba(56, 189, 248, 0.16) !important;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color:
+        #718096 !important;
+}
+
+
+/* ================= FORM MESSAGE ================= */
+
+#form-message {
+    background:
+        rgba(56, 189, 248, 0.08) !important;
+
+    color:
+        #38BDF8 !important;
+
+    border:
+        1px solid rgba(56, 189, 248, 0.35) !important;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer,
+footer {
+    background:
+        #081522 !important;
+
+    border-top:
+        1px solid rgba(56, 189, 248, 0.15) !important;
+}
+
+.footer-text p {
+    color:
+        #8998AC !important;
+}
+
+
+/* ================= BACK TO TOP ================= */
+
+.footer-iconTop a {
+    background:
+        linear-gradient(
+            135deg,
+            #38BDF8,
+            #3B82F6
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+}
+
+.footer-iconTop a i {
+    color:
+        #FFFFFF !important;
+}
+
+.footer-iconTop a:hover {
+    box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.40) !important;
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+#menu-icon {
+    color:
+        #38BDF8 !important;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        background:
+            rgba(7, 17, 31, 0.98) !important;
+
+        border-top:
+            1px solid rgba(56, 189, 248, 0.14) !important;
+    }
+}
+
+
+/* ================= TEXT SELECTION ================= */
+
+::selection {
+    background:
+        #3B82F6;
+
+    color:
+        #FFFFFF;
+}
+
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background:
+        #07111F;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            #38BDF8,
+            #3B82F6
+        );
+
+    border-radius:
+        20px;
+}
