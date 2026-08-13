@@ -1788,3 +1788,8 @@ footer {
         padding: 1.4rem;
     }
 }
+
+.home::after {
+    display: none !important;
+    content: none !important;
+}
