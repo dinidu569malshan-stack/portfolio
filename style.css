@@ -1798,3 +1798,113 @@ footer {
     display: none !important;
     content: none !important;
 }
+
+/* =========================================================
+   ANIMATED BACKGROUND
+   Black + Gold Premium Glow
+   ========================================================= */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    background: #050505;
+}
+
+/* Main animated glow */
+body::before {
+    content: "";
+
+    position: fixed;
+    top: -20%;
+    left: -10%;
+
+    width: 700px;
+    height: 700px;
+
+    background: radial-gradient(
+        circle,
+        rgba(196, 147, 63, 0.14) 0%,
+        rgba(196, 147, 63, 0.08) 25%,
+        rgba(196, 147, 63, 0.03) 45%,
+        transparent 70%
+    );
+
+    filter: blur(90px);
+
+    z-index: -2;
+
+    animation: moveGlowOne 14s ease-in-out infinite alternate;
+}
+
+/* Secondary glow */
+body::after {
+    content: "";
+
+    position: fixed;
+    right: -12%;
+    bottom: -18%;
+
+    width: 650px;
+    height: 650px;
+
+    background: radial-gradient(
+        circle,
+        rgba(227, 180, 91, 0.10) 0%,
+        rgba(196, 147, 63, 0.05) 30%,
+        transparent 70%
+    );
+
+    filter: blur(100px);
+
+    z-index: -2;
+
+    animation: moveGlowTwo 18s ease-in-out infinite alternate;
+}
+
+/* Make sure content stays above background */
+.header,
+section,
+footer,
+.home,
+.about,
+.skills,
+.services,
+.portfolio,
+.contact {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional dark overlay for smooth look */
+.background-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.08);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Keyframes */
+@keyframes moveGlowOne {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    50% {
+        transform: translate(120px, 60px) scale(1.08);
+    }
+    100% {
+        transform: translate(220px, 140px) scale(1.15);
+    }
+}
+
+@keyframes moveGlowTwo {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    50% {
+        transform: translate(-100px, -80px) scale(1.05);
+    }
+    100% {
+        transform: translate(-180px, -140px) scale(1.12);
+    }
+}
