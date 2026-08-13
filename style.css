@@ -1,11 +1,12 @@
 :root {
       /* Colors based on the provided screenshot */
-      --bg-main: #1f242d;
-      --bg-secondary: #323946;
-      --text-main: #ffffff;
-      --text-muted: #c2c2c2;
-      --primary-accent: #0ef; /* Cyan/Teal */
-      --box-shadow: 0 0 1rem rgba(0, 238, 255, 0.2);
+      --bg-main: #0B1120;
+    --bg-secondary: #172033;
+    --text-main: #F8FAFC;
+    --text-muted: #AAB4C4;
+    --primary-accent: #00E5FF;
+    --secondary-accent: #8B5CF6;
+    --box-shadow: 0 0 1rem rgba(0, 229, 255, 0.25);
     }
 
     * {
