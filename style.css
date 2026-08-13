@@ -1,30 +1,34 @@
 /* =========================================================
    Y.A.D MALSHAN PORTFOLIO
    ARTISTIC BLACK + ANTIQUE GOLD THEME
+   FULL FINAL CSS
    ========================================================= */
 
-/* ================= ROOT ================= */
+
+/* ================= ROOT COLORS ================= */
 
 :root {
     --black: #050505;
     --black-soft: #090909;
-    --surface: #0d0d0d;
+    --surface: #0D0D0D;
     --surface-light: #141414;
 
-    --gold: #c4933f;
-    --gold-bright: #e3b45b;
-    --gold-soft: #8f6b32;
+    --gold-dark: #8F6B32;
+    --gold: #C4933F;
+    --gold-bright: #E3B45B;
+    --gold-light: #F1D18B;
 
-    --ivory: #f1eee7;
-    --text-muted: #8f8d87;
+    --ivory: #F1EEE7;
+    --text-muted: #96928A;
 
     --border: rgba(196, 147, 63, 0.22);
-
     --gold-glow: rgba(196, 147, 63, 0.24);
 }
 
 
-/* ================= GLOBAL ================= */
+/* =========================================================
+   GLOBAL
+   ========================================================= */
 
 * {
     margin: 0;
@@ -46,17 +50,31 @@ html {
 
 body {
     min-height: 100vh;
+
     overflow-x: hidden;
 
     color: var(--ivory);
 
     background:
         radial-gradient(
-            circle at 50% 0%,
+            circle at 52% 8%,
             rgba(196, 147, 63, 0.055),
             transparent 28%
         ),
+        radial-gradient(
+            circle at 85% 45%,
+            rgba(196, 147, 63, 0.025),
+            transparent 30%
+        ),
         var(--black);
+}
+
+
+/* ================= SELECTION ================= */
+
+::selection {
+    background: var(--gold);
+    color: #050505;
 }
 
 
@@ -71,24 +89,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-        var(--gold-soft),
-        var(--gold-bright)
-    );
+    background:
+        linear-gradient(
+            var(--gold-dark),
+            var(--gold-bright)
+        );
 
     border-radius: 10px;
 }
 
 
-/* ================= SELECTION ================= */
-
-::selection {
-    background: var(--gold);
-    color: #050505;
-}
-
-
-/* ================= SECTIONS ================= */
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
 section {
     position: relative;
@@ -99,6 +112,7 @@ section {
 
     display: flex;
     flex-direction: column;
+
     justify-content: center;
 
     background: transparent;
@@ -121,18 +135,19 @@ header {
     padding: 2rem 8%;
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
     z-index: 1000;
 
-    background: rgba(5, 5, 5, 0.82);
+    background: rgba(5, 5, 5, 0.88);
 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 
     border-bottom:
-        1px solid rgba(255, 255, 255, 0.035);
+        1px solid rgba(255, 255, 255, 0.04);
 
     transition: 0.35s ease;
 }
@@ -145,15 +160,18 @@ header.sticky {
     background: rgba(4, 4, 4, 0.97);
 
     border-bottom:
-        1px solid rgba(196, 147, 63, 0.12);
+        1px solid rgba(196, 147, 63, 0.14);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.30);
 }
 
 
-/* ================= LOGO ================= */
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .logo {
-    position: relative;
-
     font-size: 1.6rem;
 
     font-weight: 500;
@@ -175,11 +193,13 @@ header.sticky {
     color: var(--gold-bright);
 
     text-shadow:
-        0 0 18px var(--gold-glow);
+        0 0 18px rgba(196, 147, 63, 0.28);
 }
 
 
-/* ================= NAVIGATION ================= */
+/* =========================================================
+   NAVBAR
+   ========================================================= */
 
 .navbar {
     display: flex;
@@ -192,7 +212,7 @@ header.sticky {
 .navbar a {
     position: relative;
 
-    color: #c6c2b9;
+    color: #C6C2B9;
 
     font-size: 0.75rem;
 
@@ -269,7 +289,7 @@ header.sticky {
 }
 
 
-/* ================= HUGE OUTLINE TEXT ================= */
+/* ================= LARGE OUTLINE TEXT ================= */
 
 .home::after {
     content: 'ARTISTIC';
@@ -277,22 +297,22 @@ header.sticky {
     position: absolute;
 
     left: 8%;
-    top: 44%;
+    top: 49%;
 
     transform: translateY(-50%);
 
-    z-index: -2;
+    z-index: -3;
 
-    font-size: clamp(7rem, 15vw, 15rem);
+    font-size: clamp(7rem, 14vw, 15rem);
 
     font-weight: 300;
 
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
 
     color: transparent;
 
     -webkit-text-stroke:
-        1px rgba(255, 255, 255, 0.095);
+        1px rgba(255, 255, 255, 0.09);
 
     white-space: nowrap;
 
@@ -300,20 +320,20 @@ header.sticky {
 }
 
 
-/* ================= GOLD FLOWING EFFECT ================= */
+/* ================= GOLD FLOW EFFECT ================= */
 
 .home::before {
     content: '';
 
     position: absolute;
 
-    width: 290px;
-    height: 900px;
+    width: 270px;
+    height: 930px;
 
-    top: -260px;
-    left: 53%;
+    top: -270px;
+    left: 51%;
 
-    z-index: -1;
+    z-index: -2;
 
     transform:
         translateX(-50%)
@@ -323,30 +343,27 @@ header.sticky {
         linear-gradient(
             90deg,
             transparent 0%,
-
-            rgba(95, 57, 8, 0.12) 20%,
-
-            rgba(196, 147, 63, 0.80) 42%,
-
-            rgba(244, 193, 91, 0.95) 50%,
-
-            rgba(150, 89, 18, 0.58) 59%,
-
-            transparent 78%
+            rgba(95, 57, 8, 0.10) 19%,
+            rgba(196, 147, 63, 0.72) 42%,
+            rgba(239, 185, 80, 0.95) 50%,
+            rgba(151, 90, 20, 0.52) 60%,
+            transparent 79%
         );
 
-    filter: blur(7px);
+    filter: blur(8px);
 
     border-radius:
-        50% 20% 55% 25%;
+        55% 18% 60% 22%;
 
-    opacity: 0.9;
+    opacity: 0.88;
 
     pointer-events: none;
 }
 
 
-/* ================= HOME CONTENT ================= */
+/* =========================================================
+   HOME CONTENT
+   ========================================================= */
 
 .home-content {
     position: relative;
@@ -392,15 +409,20 @@ header.sticky {
 .home-content .text-animate {
     margin-bottom: 1.5rem;
 
-    font-size: 1.65rem;
+    font-size: 1.45rem;
 
     font-weight: 300;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
 }
 
 .home-content .text-animate span {
     color: var(--gold-bright);
+
+    text-shadow:
+        0 0 16px rgba(196, 147, 63, 0.12);
 }
 
 
@@ -411,7 +433,7 @@ header.sticky {
 
     margin-bottom: 2.5rem;
 
-    color: #99958d;
+    color: var(--text-muted);
 
     font-size: 0.95rem;
 
@@ -422,7 +444,7 @@ header.sticky {
 
 
 /* =========================================================
-   SOCIAL MEDIA
+   SOCIAL ICONS
    ========================================================= */
 
 .social-media {
@@ -445,7 +467,7 @@ header.sticky {
     border-radius: 50%;
 
     border:
-        1px solid rgba(196, 147, 63, 0.50);
+        1px solid rgba(196, 147, 63, 0.55);
 
     color: var(--gold-bright);
 
@@ -458,8 +480,7 @@ header.sticky {
 }
 
 .social-media a:hover {
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
 
     background: var(--gold-bright);
 
@@ -486,7 +507,6 @@ header.sticky {
 
 .btn {
     min-width: 150px;
-
     min-height: 48px;
 
     padding:
@@ -503,7 +523,7 @@ header.sticky {
     background:
         linear-gradient(
             135deg,
-            #a16d24,
+            #A16D24,
             var(--gold-bright)
         );
 
@@ -559,13 +579,14 @@ header.sticky {
 
 
 /* =========================================================
-   PROFILE IMAGE
+   PROFILE IMAGE AREA
+   LUXURY MATCHING FRAME
    ========================================================= */
 
 .home-img {
     position: relative;
 
-    z-index: 3;
+    z-index: 4;
 
     width: 430px;
     height: 550px;
@@ -575,11 +596,11 @@ header.sticky {
     display: flex;
 
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 
-/* ================= REMOVE HEXAGON LOOK ================= */
+/* ================= MAIN GOLD FRAME ================= */
 
 .hexagon-wrapper {
     position: relative;
@@ -587,91 +608,190 @@ header.sticky {
     width: 100%;
     height: 100%;
 
-    background: transparent;
+    padding: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(143, 107, 50, 0.85),
+            rgba(227, 180, 91, 0.95),
+            rgba(126, 86, 31, 0.85)
+        );
+
+    border:
+        1px solid rgba(227, 180, 91, 0.48);
 
     clip-path: none;
-
-    filter: none;
 
     overflow: visible;
+
+    box-shadow:
+        0 0 18px rgba(196, 147, 63, 0.11),
+        0 0 42px rgba(196, 147, 63, 0.07);
+
+    transition: 0.45s ease;
 }
 
+
+/* ================= INNER DECORATIVE BORDER ================= */
+
+.hexagon-wrapper::before {
+    content: '';
+
+    position: absolute;
+
+    top: 9px;
+    right: 9px;
+    bottom: 9px;
+    left: 9px;
+
+    border:
+        1px solid rgba(255, 235, 190, 0.30);
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+/* ================= OUTER OFFSET BORDER ================= */
+
+.hexagon-wrapper::after {
+    content: '';
+
+    position: absolute;
+
+    top: -12px;
+    left: -12px;
+
+    right: 22px;
+    bottom: 22px;
+
+    border:
+        1px solid rgba(196, 147, 63, 0.20);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* ================= IMAGE HOLDER ================= */
+
 .hexagon-inner {
+    position: relative;
+
     width: 100%;
     height: 100%;
-
-    clip-path: none;
-
-    background: transparent;
 
     overflow: hidden;
 
     display: flex;
 
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 
-    border-bottom:
-        1px solid rgba(196, 147, 63, 0.35);
+    clip-path: none;
+
+    background: #080808;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.04);
 }
+
+
+/* ================= PROFILE PHOTO ================= */
 
 .hexagon-inner img {
     width: 100%;
     height: 100%;
+
+    display: block;
 
     object-fit: cover;
 
     object-position: center top;
 
     filter:
-        grayscale(35%)
-        contrast(1.05)
-        brightness(0.82);
+        contrast(1.04)
+        brightness(0.88)
+        saturate(0.92);
 
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black 72%,
-            transparent 100%
-        );
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
 
-    -webkit-mask-image:
-        linear-gradient(
-            to bottom,
-            black 72%,
-            transparent 100%
-        );
+.hexagon-wrapper:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 0 25px rgba(196, 147, 63, 0.16),
+        0 0 55px rgba(196, 147, 63, 0.08);
+}
+
+.hexagon-wrapper:hover .hexagon-inner img {
+    transform: scale(1.025);
+
+    filter:
+        contrast(1.06)
+        brightness(0.92)
+        saturate(1);
 }
 
 
-/* ================= PROFILE GOLD GLOW ================= */
+/* ================= GOLD BACKLIGHT ================= */
 
 .home-img::before {
     content: '';
 
     position: absolute;
 
-    width: 72%;
-    height: 75%;
+    width: 80%;
+    height: 82%;
 
-    right: 5%;
-    bottom: 0;
+    right: -2%;
+    bottom: -2%;
 
-    z-index: -1;
+    z-index: -2;
 
     background:
         radial-gradient(
             ellipse,
             rgba(196, 147, 63, 0.19),
-            transparent 68%
+            transparent 70%
         );
 
-    filter: blur(25px);
+    filter: blur(30px);
+}
+
+
+/* ================= SMALL DECORATIVE LINE ================= */
+
+.home-img::after {
+    content: '';
+
+    position: absolute;
+
+    width: 130px;
+    height: 1px;
+
+    left: -40px;
+    bottom: 18px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(227, 180, 91, 0.9),
+            transparent
+        );
 }
 
 
 /* =========================================================
-   COMMON SECTION HEADING
+   COMMON SECTION HEADINGS
    ========================================================= */
 
 .heading {
@@ -704,8 +824,7 @@ header.sticky {
 
     margin-top: 1rem;
 
-    background:
-        var(--gold-bright);
+    background: var(--gold-bright);
 }
 
 
@@ -746,9 +865,6 @@ header.sticky {
         0 25px 60px rgba(0, 0, 0, 0.38);
 }
 
-
-/* ================= ABOUT TEXT ================= */
-
 .about-text h3 {
     margin-bottom: 1rem;
 
@@ -776,7 +892,9 @@ header.sticky {
 }
 
 
-/* ================= EDUCATION ================= */
+/* =========================================================
+   EDUCATION
+   ========================================================= */
 
 .education-box {
     margin-top: 1.6rem;
@@ -823,7 +941,7 @@ header.sticky {
 
 
 /* =========================================================
-   GRID
+   SKILLS / SERVICES GRID
    ========================================================= */
 
 .grid-container {
@@ -837,9 +955,6 @@ header.sticky {
 
     gap: 1.5rem;
 }
-
-
-/* ================= GRID CARD ================= */
 
 .grid-card {
     position: relative;
@@ -881,7 +996,7 @@ header.sticky {
     background:
         linear-gradient(
             90deg,
-            var(--gold-soft),
+            var(--gold-dark),
             var(--gold-bright)
         );
 
@@ -889,8 +1004,7 @@ header.sticky {
 }
 
 .grid-card:hover {
-    transform:
-        translateY(-7px);
+    transform: translateY(-7px);
 
     border-color:
         rgba(196, 147, 63, 0.32);
@@ -898,8 +1012,8 @@ header.sticky {
     background:
         linear-gradient(
             145deg,
-            #15120d,
-            #0a0a0a
+            #15120D,
+            #0A0A0A
         );
 
     box-shadow:
@@ -911,7 +1025,7 @@ header.sticky {
 }
 
 
-/* ================= CARD ICON ================= */
+/* ================= GRID ICONS ================= */
 
 .grid-card i {
     margin-bottom: 1.5rem;
@@ -924,15 +1038,14 @@ header.sticky {
 }
 
 .grid-card:hover i {
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     text-shadow:
         0 0 20px rgba(196, 147, 63, 0.25);
 }
 
 
-/* ================= CARD TEXT ================= */
+/* ================= GRID TEXT ================= */
 
 .grid-card h3 {
     margin-bottom: 1rem;
@@ -1003,7 +1116,7 @@ header.sticky {
 
 
 /* =========================================================
-   PORTFOLIO PROJECTS
+   PORTFOLIO
    ========================================================= */
 
 .portfolio-container {
@@ -1018,9 +1131,6 @@ header.sticky {
     gap: 1.7rem;
 }
 
-
-/* ================= PROJECT CARD ================= */
-
 .portfolio-box {
     position: relative;
 
@@ -1030,8 +1140,7 @@ header.sticky {
 
     flex-direction: column;
 
-    background:
-        #0c0c0c;
+    background: #0C0C0C;
 
     border:
         1px solid rgba(255, 255, 255, 0.055);
@@ -1066,14 +1175,12 @@ header.sticky {
 }
 
 .portfolio-box:hover {
-    transform:
-        translateY(-8px);
+    transform: translateY(-8px);
 
     border-color:
         rgba(196, 147, 63, 0.34);
 
-    background:
-        #10100f;
+    background: #10100F;
 
     box-shadow:
         0 25px 55px rgba(0, 0, 0, 0.38);
@@ -1092,7 +1199,6 @@ header.sticky {
     flex-grow: 1;
 
     display: flex;
-
     flex-direction: column;
 }
 
@@ -1130,7 +1236,7 @@ header.sticky {
 
 
 /* =========================================================
-   TAGS
+   PROJECT TAGS
    ========================================================= */
 
 .tags {
@@ -1156,7 +1262,7 @@ header.sticky {
     background:
         rgba(196, 147, 63, 0.055);
 
-    color: #cba75d;
+    color: #CBA75D;
 
     font-size: 0.68rem;
 
@@ -1193,11 +1299,11 @@ header.sticky {
 .project-buttons .btn {
     min-width: auto;
 
+    min-height: 42px;
+
     padding:
         0.65rem
         1.3rem;
-
-    min-height: 42px;
 
     font-size: 0.68rem;
 }
@@ -1231,7 +1337,7 @@ header.sticky {
 }
 
 
-/* ================= INPUT ================= */
+/* ================= CONTACT INPUTS ================= */
 
 .contact form .input-box input,
 .contact form textarea {
@@ -1268,23 +1374,16 @@ header.sticky {
     resize: none;
 }
 
-
-/* ================= PLACEHOLDER ================= */
-
 .contact form input::placeholder,
 .contact form textarea::placeholder {
-    color: #68665f;
+    color: #68665F;
 
     letter-spacing: 0.8px;
 }
 
-
-/* ================= INPUT FOCUS ================= */
-
 .contact form .input-box input:focus,
 .contact form textarea:focus {
-    border-color:
-        var(--gold-bright);
+    border-color: var(--gold-bright);
 
     box-shadow:
         0 1px 0 rgba(196, 147, 63, 0.15);
@@ -1333,15 +1432,14 @@ footer {
 
     flex-wrap: wrap;
 
-    background:
-        #030303;
+    background: #030303;
 
     border-top:
         1px solid rgba(255, 255, 255, 0.055);
 }
 
 .footer-text p {
-    color: #65625d;
+    color: #65625D;
 
     font-size: 0.72rem;
 
@@ -1362,8 +1460,7 @@ footer {
     align-items: center;
     justify-content: center;
 
-    background:
-        #101010;
+    background: #101010;
 
     border:
         1px solid rgba(196, 147, 63, 0.28);
@@ -1395,24 +1492,24 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE 1200
+   RESPONSIVE - 1200px
    ========================================================= */
 
 @media (max-width: 1200px) {
 
-    .home-img {
-        width: 380px;
-        height: 500px;
-    }
-
     .home {
         gap: 2rem;
+    }
+
+    .home-img {
+        width: 390px;
+        height: 500px;
     }
 }
 
 
 /* =========================================================
-   RESPONSIVE 991
+   RESPONSIVE - 991px
    ========================================================= */
 
 @media (max-width: 991px) {
@@ -1454,11 +1551,16 @@ footer {
     }
 
     .home::before {
-        left: 60%;
+        left: 62%;
     }
 
     .home-content {
         max-width: 720px;
+    }
+
+    .home-content p {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .social-media,
@@ -1469,6 +1571,8 @@ footer {
     .home-img {
         width: 350px;
         height: 440px;
+
+        margin-top: 2rem;
     }
 
     .about-content {
@@ -1485,7 +1589,7 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE 768
+   RESPONSIVE - 768px
    ========================================================= */
 
 @media (max-width: 768px) {
@@ -1537,7 +1641,6 @@ footer {
 
     .home::before {
         width: 180px;
-
         height: 700px;
     }
 
@@ -1550,7 +1653,7 @@ footer {
     }
 
     .home-content .text-animate {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
     }
 
     .heading {
@@ -1573,7 +1676,7 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE 600
+   RESPONSIVE - 600px
    ========================================================= */
 
 @media (max-width: 600px) {
@@ -1596,7 +1699,9 @@ footer {
     }
 
     .home-content .text-animate {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
+
+        letter-spacing: 2px;
     }
 
     .home-content p {
@@ -1641,7 +1746,7 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE 400
+   RESPONSIVE - 400px
    ========================================================= */
 
 @media (max-width: 400px) {
@@ -1662,12 +1767,12 @@ footer {
     }
 
     .home-content .text-animate {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
     }
 
     .home-img {
-        width: 230px;
-        height: 310px;
+        width: 225px;
+        height: 300px;
     }
 
     .heading {
